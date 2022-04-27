@@ -1,5 +1,9 @@
 package dynamic_programming;
 
+/**
+ * 5. 最长回文子串
+ * 给你一个字符串 s，找到 s 中最长的回文子串。
+ */
 public class _5_Longest_Palindromic_Substring {
     public String longestPalindrome(String s) {
         //字符串的长度
