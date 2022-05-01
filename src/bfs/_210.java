@@ -44,21 +44,19 @@ public class _210 {
                 queue.offer(i);
             }
         }
-
         while (!queue.isEmpty()) {
             // 从队首取出一个节点
             int u = queue.poll();
             // 放入答案中
             result[index++] = u;
             for (int v : edges.get(u)) {
-                --inDegree[v];
+                --inDegree[v]; //把后面的入度减1然后继续接下来的操作
                 // 如果相邻节点 v 的入度为 0，就可以选 v 对应的课程了
                 if (inDegree[v] == 0) {
                     queue.offer(v);
                 }
             }
         }
-
         if (index != numCourses) {
             return new int[0];
         }
