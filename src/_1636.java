@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 
@@ -24,10 +23,7 @@ public class _1636 {
         for (int key : hashTable.keySet()) {
             list.add(new int[]{key, hashTable.get(key)});
         }
-        Collections.sort(list, (a, b) -> {
-            return a[1] != b[1] ? a[1] - b[1] : b[0] - a[0];
-        });
-
+        list.sort((a, b) -> a[1] != b[1] ? a[1] - b[1] : b[0] - a[0]);
         int[] ans = new int[nums.length];
         int index = 0;
         for (int[] arr : list) {
