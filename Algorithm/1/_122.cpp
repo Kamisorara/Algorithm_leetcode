@@ -7,7 +7,21 @@ class Solution {
     *买卖股票的最佳时机 II
     */
 public:
+    // dp
     int maxProfit(vector<int>& prices) {
+        if(prices.empty() || prices.size()<2){
+            return 0;
+        }
+        int noHold = 0;
+        int hold = -prices[0];
+        for(int i = 0;i<prices.size();i++){
+            noHold = max(noHold,hold+prices[i]);
+            hold = max(hold,noHold-prices[i]);
+        }
+        return noHold;
+    }
+    //dp 优化
+    int maxProfit2(vector<int>& prices) {
         if(prices.empty() || prices.size()<2){
             return 0;
         }
