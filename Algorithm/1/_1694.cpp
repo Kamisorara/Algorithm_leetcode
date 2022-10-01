@@ -10,28 +10,28 @@ public:
     string reformatNumber(string number) {
         string ans;
         int n = number.size();
-        string numberList;
-        for (int i = 0; i < n; i++) {
-            char temp = number[i];
-            if (isdigit(temp)) {
-                numberList.push_back(temp);
+        string digits;
+        for (char ch : number) {
+            if (isdigit(ch)) {
+                digits.push_back(ch);
             }
         }
-        int nums = numberList.size();
+        int nums = digits.size();
         int index = 0;
-        while (nums > 0) {
+        while (nums) {
             if (nums > 4) {
-                ans += numberList.substr(index, 3) + "-";
+                ans += digits.substr(index, 3) + "-";
                 index += 3;
                 nums -= 3;
             } else {
                 if (nums == 4) {
-                    ans += numberList.substr(index, 2) + "-" + numberList.substr(index + 2, 2);
+                    ans += digits.substr(index, 2) + "-" + digits.substr(index + 2, 2);
                 } else {
-                    ans += numberList.substr(index, 2);
+                    //最后可能剩下两个，也可能剩下三个
+                    ans += digits.substr(index, nums);
                 }
+                break;
             }
-            break;
         }
         return ans;
     }
