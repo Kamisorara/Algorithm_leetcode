@@ -39,6 +39,5 @@ class Solution {
         } catch (NumberFormatException e) {
             return 0;
         }
-
     }
 }
