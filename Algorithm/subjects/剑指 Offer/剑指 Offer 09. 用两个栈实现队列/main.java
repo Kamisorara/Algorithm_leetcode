@@ -1,3 +1,5 @@
+import java.util.LinkedList;
+
 class CQueue {
 
     LinkedList<Integer> queue1;
