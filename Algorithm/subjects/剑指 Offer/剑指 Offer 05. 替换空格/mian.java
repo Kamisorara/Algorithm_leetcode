@@ -5,7 +5,7 @@ class Solution {
         return newStr;
     }
 
-    //老老实实进行字符串拼接
+    // 老老实实进行字符串拼接
     public String replaceSpace_2(String s) {
         char[] chars = s.toCharArray();
         StringBuilder sb = new StringBuilder();
