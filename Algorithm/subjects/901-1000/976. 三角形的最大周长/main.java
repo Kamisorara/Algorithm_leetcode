@@ -12,6 +12,7 @@ class Solution {
         // } else {
         // return a + b + c;
         // }
+
         for (int i = n - 1; i >= 2; i--) {
             int a = nums[i];
             int b = nums[i - 1];
