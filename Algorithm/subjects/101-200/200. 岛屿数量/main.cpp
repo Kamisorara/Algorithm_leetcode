@@ -1,4 +1,5 @@
 class Solution {
+// BFS
 public:
     int numIslands(vector<vector<char>>& grid) {
         int direction[4][2]{{0, -1}, {0, 1}, {1, 0}, {-1 ,0}};
